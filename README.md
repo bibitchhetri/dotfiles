@@ -1,2 +1,2 @@
 # dot-files
-dev workflow
+dev workflow for linux & macOS
