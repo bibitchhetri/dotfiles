@@ -1,0 +1,37 @@
+# Ignore history and session files
+.bash_history
+.zsh_history
+.viminfo
+
+# Ignore caches and temporary files
+.cache/
+.local/
+.npm/
+.mozilla/
+.docker/
+
+# Ignore unnecessary user config directories (unless tracked specifically)
+.oh-my-zsh/
+.fontconfig/
+.ssh/
+
+# Ignore specific environment files that aren't relevant for tracking
+.bash_logout
+.zcompdump-fedora-5.9
+.zcompdump-fedora-5.9.zwc
+.shell.pre-oh-my-zsh
+
+# Ignore application-specific directories that are not part of the configuration
+Documents/
+bin/
+
+# Track important dotfiles and configs
+.zshrc
+.bashrc
+.bash_profile
+.zshrc.pre-oh-my-zsh
+.config/*
+!.config/tmux/
+!.config/nvim/
+.dotfiles/
+.gitconfig
