@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+BASE_DIR=~/Documents
+MODE=$(echo -e "Attach Existing Session\nStart New Session" | fzf --prompt="Choose an option: ")
+
+[[ -z "$MODE" ]] && exit 1
+
+if [[ "$MODE" == "Attach Existing Session" ]]; then
+    EXISTING_SESSIONS=$(tmux list-sessions -F "#{session_name}" 2>/dev/null)
+    
+    if [[ -z "$EXISTING_SESSIONS" ]]; then
+        echo "No existing sessions found."
+        exit 1
+    fi
+
+    SELECTED_SESSION=$(echo "$EXISTING_SESSIONS" | fzf --prompt="Select a session to attach: ")
+    [[ -n "$SELECTED_SESSION" ]] && tmux attach-session -t "$SELECTED_SESSION"
+    exit 0
+fi
+
+if [[ "$MODE" == "Start New Session" ]]; then
+    FOLDER_SELECTION=$(find "$BASE_DIR" -type d -not -path '*/\.*' | fzf --prompt="Select a folder for new session: ")
+
+    [[ -z "$FOLDER_SELECTION" ]] && exit 1
+
+    SESSION_NAME=$(basename "$FOLDER_SELECTION")
+
+    if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+        tmux attach-session -t "$SESSION_NAME"
+    else
+        tmux new-session -s "$SESSION_NAME" -c "$FOLDER_SELECTION"
+    fi
+    exit 0
+fi
+
+
