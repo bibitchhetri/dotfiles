@@ -23,15 +23,17 @@
 
 # Ignore application-specific directories that are not part of the configuration
 Documents/
-bin/
 
-# Track important dotfiles and configs
+# Ignore undesired config
 .zshrc
 .bashrc
 .bash_profile
 .zshrc.pre-oh-my-zsh
 .config/*
-!.config/tmux/
-!.config/nvim/
 .dotfiles/
 .gitconfig
+
+# Track desired config files
+!.config/tmux/
+!.config/nvim/
+
