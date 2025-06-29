@@ -36,4 +36,4 @@ Documents/
 # Track desired config files
 !.config/tmux/
 !.config/nvim/
-
+!.config/sketchybar/
