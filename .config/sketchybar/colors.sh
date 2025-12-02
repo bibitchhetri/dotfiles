@@ -28,10 +28,10 @@ export WHITE=0xffe6e6e6
 # export WHITE=0xff000000          # Use black text/icons here instead
 
 ##### 🌿 Gruvbox Dark — Retro Yet Modern
-# export BAR_COLOR=0x80282828
-# export ITEM_BG_COLOR=0x80404040
-# export ACCENT_COLOR=0xfffabd2f
-# export WHITE=0xffebdbb2  # Gruvbox light text
+export BAR_COLOR=0x80282828
+export ITEM_BG_COLOR=0x80404040
+export ACCENT_COLOR=0xfffabd2f
+export WHITE=0xffebdbb2  # Gruvbox light text
 
 ##### 💎 Transparent Glassy — Minimal Blur Focused
 # export BAR_COLOR=0x401a1a1a  # Highly translucent
@@ -40,7 +40,7 @@ export WHITE=0xffe6e6e6
 # export WHITE=0xffffffff
 
 ##### 🪐 Purple Neon — Futuristic
-export BAR_COLOR=0x801c1036
-export ITEM_BG_COLOR=0x80201c3c
-export ACCENT_COLOR=0xffa26cff
-export WHITE=0xffeae1ff
+# export BAR_COLOR=0x801c1036
+# export ITEM_BG_COLOR=0x80201c3c
+# export ACCENT_COLOR=0xffa26cff
+# export WHITE=0xffeae1ff
