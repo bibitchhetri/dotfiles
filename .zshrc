@@ -207,7 +207,7 @@ export PATH="$HOME/.opencode/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# --- dotfiles manager (bare git repo, DistroTube style) ---
+# --- dotfiles manager (bare git repo) ---
 dot() {
   /usr/bin/git --git-dir="$HOME/.dotfiles.git/" --work-tree="$HOME" "$@"
 }

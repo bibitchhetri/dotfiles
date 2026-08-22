@@ -1,6 +1,6 @@
 # dotfiles
 
-macOS dotfiles managed the DistroTube way: a **bare git repo** at `~/.dotfiles.git`
+macOS dotfiles managed as a **bare git repo** at `~/.dotfiles.git`
 with `$HOME` as its work-tree. Files are tracked in place - no symlinks, no stow.
 
 ## Layout
