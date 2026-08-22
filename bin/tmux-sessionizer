@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BASE_DIR=~/Documents
+BASE_DIR=~/Downloads
 MODE=$(echo -e "Attach Existing Session\nStart New Session" | fzf --prompt="Choose an option: ")
 
 [[ -z "$MODE" ]] && exit 1
@@ -32,5 +32,4 @@ if [[ "$MODE" == "Start New Session" ]]; then
     fi
     exit 0
 fi
-
 
