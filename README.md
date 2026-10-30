@@ -16,7 +16,6 @@ Then finish manually:
 ```bash
 gh auth login
 security add-generic-password -a "$USER" -s "cloudflare-api-token" -w '<token>'
-security add-generic-password -a "$USER" -s "jira-api-token"      -w '<token>'
 ```
 
 In tmux press `prefix + I` to install plugins.
